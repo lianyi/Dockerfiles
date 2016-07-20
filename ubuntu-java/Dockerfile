@@ -11,12 +11,12 @@
 #  https://www.linkedin.com/in/harisekhon
 #
 
-FROM ubuntu:latest
+FROM ubuntu:14.04
 MAINTAINER Hari Sekhon (https://www.linkedin.com/in/harisekhon)
 
 LABEL Description="Java + Ubuntu (OpenJDK)"
 
-ARG JAVA_VERSION=8
+ARG JAVA_VERSION=7
 ARG JAVA_RELEASE=JDK
 
 ENV JAVA_HOME=/usr
@@ -24,7 +24,7 @@ ENV JAVA_HOME=/usr
 RUN apt-get update && \
     pkg="openjdk-$JAVA_VERSION"; \
     if [ "$JAVA_RELEASE" = "JDK" ]; then \
-        pkg="$pkg-jdk-headless"; \
+        pkg="$pkg-jdk"; \
     else \
         pkg="$pkg-jre-headless"; \
     fi; \
