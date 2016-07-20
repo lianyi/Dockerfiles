@@ -4,7 +4,7 @@
 #
 #  vim:ts=4:sts=4:sw=4:et
 #
-#  https://github.com/harisekhon/Dockerfiles
+#  https://github.com/harisekhon/Dockerfiles/centos-java
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help improve or steer this or other code I publish
 #
@@ -23,7 +23,7 @@ ENV JAVA_HOME=/usr
 
 RUN \
     pkg="java-1.$JAVA_VERSION.0-openjdk"; \
-    if [ JAVA_RELEASE = "JDK" ]; then \
+    if [ "$JAVA_RELEASE" = "JDK" ]; then \
         pkg="$pkg-devel"; \
     else \
         pkg="$pkg-headless"; \
