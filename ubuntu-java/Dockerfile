@@ -11,13 +11,13 @@
 #  https://www.linkedin.com/in/harisekhon
 #
 
-FROM ubuntu:latest
+FROM ubuntu:14.04
 MAINTAINER Hari Sekhon (https://www.linkedin.com/in/harisekhon)
 
 LABEL Description="Java + Ubuntu (OpenJDK)"
 
-ARG JAVA_VERSION=8
-ARG JAVA_RELEASE=JDK
+ARG JAVA_VERSION=7
+ARG JAVA_RELEASE=JRE
 
 ENV JAVA_HOME=/usr
 
