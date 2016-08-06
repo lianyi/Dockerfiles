@@ -4,7 +4,7 @@
 #
 #  vim:ts=4:sts=4:sw=4:noet
 #
-#  https://github.com/harisekhon/Dockerfiles
+#  https://github.com/harisekhon/Dockerfiles/apache-drill
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help improve or steer this or other code I publish
 #
@@ -30,3 +30,7 @@ nocache:
 .PHONY: run
 run:
 	docker run -ti -p 8047:8047 $(REPO):$(TAG)
+
+.PHONY: run-drillbit
+run-drillbit:
+	docker run -ti -p 8047:8047 $(REPO):$(TAG) supervisord -n
